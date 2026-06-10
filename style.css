@@ -1,0 +1,46 @@
+#recibo {
+    border : 2px solid black;
+
+    padding : 20px;
+
+    margin-top : 20px;
+
+    width : 400px;
+    
+    background-color: white;
+    
+}
+
+#recibo h2 {
+    text-align:center;
+
+}
+#assinatura {
+    text-align: center;
+    margin-top : 50px;
+}
+
+body {
+    font-family : Arial, sans-serif;
+
+    padding : 20px;
+    
+}
+
+@media print {
+    h1 {
+        display : none;
+    }
+
+    input {
+        display: none;
+    }
+
+    button {
+        display: none;
+    }
+
+    #recibo {
+        margin: auto;
+    }
+}
