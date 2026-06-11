@@ -1,5 +1,5 @@
 #recibo {
-    border : 2px solid black;
+    border : 2px solid rgb(2, 2, 2);
 
     padding : 20px;
 
@@ -7,12 +7,24 @@
 
     width : 400px;
     
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     
 }
 
 #recibo h2 {
     text-align:center;
+
+}
+
+#recibo h3 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+#recibo p {
+    text-align: center;
+    font-size: 32px;
+    margin: 5px 0;
 
 }
 #assinatura {
@@ -25,6 +37,12 @@ body {
 
     padding : 20px;
     
+}
+
+#logo {
+    width:180px;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
 @media print {
