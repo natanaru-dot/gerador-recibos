@@ -1,53 +1,88 @@
 #recibo {
-    border : 2px solid rgb(2, 2, 2);
+   
+    text-align: center;
 
-    padding : 20px;
+    background-color: white;
 
-    margin-top : 20px;
+    width: 450px;
 
-    width : 400px;
-    
-    background-color: rgb(255, 255, 255);
+    padding: 30px;
+
+    margin-top: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+    border: 1px solid #ddd;
     
 }
 
 #recibo h2 {
     text-align:center;
 
+    color: #1f3c88;
+
+    margin-top: 30px;
+
 }
 
 #recibo h3 {
     margin: 10px 0;
+
     text-align: center;
 }
 
 #recibo p {
     text-align: center;
-    font-size: 32px;
+
+    font-size: 22px;
+
     margin: 5px 0;
 
 }
 #assinatura {
     text-align: center;
-    margin-top : 50px;
+
+    margin-top : 80px;
+
+    color: #666;
 }
 
 body {
     font-family : Arial, sans-serif;
 
+    background-color: #f4f6f9;
+
     padding : 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    max-width: 1400px;
+
+    margin: auto;
     
 }
 
 #logo {
     width:180px;
+
     display: block;
-    margin: 0 auto 10px auto;
+
+    margin: 0 auto 20px auto;
 }
 
 @media print {
     h1 {
         display : none;
+
+        color: #1f3c88;
+
+        margin-bottom: 25px;
     }
 
     input {
@@ -61,4 +96,82 @@ body {
     #recibo {
         margin: auto;
     }
+}
+
+input{
+
+    width: 200px;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    margin: 3px;
+}
+
+button{
+
+    background-color: #1f3c88;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 10px 15px;
+
+    margin: 4px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+button:hover {
+
+    background-color: #2d5ac7;
+
+}
+
+#historico {
+
+    background-color: white;
+
+    width: 500px;
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+    max-height: 400px;
+
+    overflow-y: auto;
+
+}
+
+#historico h2 {
+
+    text-align: center;
+
+    color:#1f3c88;
+}
+
+#painel {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    
 }

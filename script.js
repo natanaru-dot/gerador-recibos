@@ -12,10 +12,13 @@ document.getElementById("data").value = dataHoje;
 
 const buscar = document.getElementById("buscar");
 
+const mostrarTodos = document.getElementById("mostrarTodos");
+
 const pesquisar = document.getElementById("pesquisar");
 
 const historico = document.getElementById("historico");
 
+const exportar = document.getElementById("exportar");
 
 const limparHistorico = document.getElementById("limparHistorico");
 
@@ -143,5 +146,32 @@ pesquisar.addEventListener("click", function(){
             historico.innerHTML += "<p>" + item + "</p>";
         }
     }
+
+});
+
+mostrarTodos.addEventListener("click", function(){
+
+      historico.innerHTML = "<h2>Últimos Recibos</h2>";
+      
+      for (let item of historicoRecibos) {
+
+            historico.innerHTML += "<p>" + item + "</p>"
+      }
+
+});
+
+exportar.addEventListener("click", function() {
+
+      const texto = historicoRecibos.join("/n"); 
+
+      const blob = new Blob([texto], {type: "text/plain"});
+
+      const link = document.createElement("a");
+
+      link.href = URL.createObjectURL(blob);
+
+      link.download = "historico-recibos.txt";
+
+      link.click();
 
 });
