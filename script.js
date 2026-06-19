@@ -91,7 +91,11 @@ const botao = document.getElementById("gerar");
 
                         JSON.stringify(historicoRecibos)
 
+                        
+
                   );
+
+                  atualizarEstatisticas();
 
                   document.getElementById("nome").value = "";
 
@@ -274,3 +278,44 @@ function excluirRecibo(indice) {
 
       location.reload();
 }
+
+function atualizarEstatisticas ()
+{
+      console.log(historicoRecibos);
+
+      let total = historicoRecibos.length;
+
+      let soma = 0;
+
+      for (let item of historicoRecibos)
+      {
+
+            console.log(item);
+
+           soma += Number (
+
+            item.valor
+            .replaceAll(".", "")
+            .replace(",", ".")
+           )
+
+      }
+document.getElementById("totalRecibos").innerHTML = 
+
+"Total de recibos: " + total;
+
+document.getElementById("valorTotal").innerHTML = 
+
+"Valor recebido: R$" + 
+
+soma.toLocaleString("pt-BR", {
+      minimumFractionDigits: 2
+
+});
+
+
+
+}
+
+atualizarEstatisticas();
+
